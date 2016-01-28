@@ -17,7 +17,7 @@
       <tr>
         <td><%= user.name %></td>
         <td><%= user.age %></td>
-        <td><%= link_to 'Orders', user_orders_user_path(user) , :class => "btn btn-primary" %></td>
+        <td><%= link_to 'Orders', user_orders_user_path(user) , :class => "btn btn-primary", :remote => true%></td>
 
         <td><%= link_to 'Show', user %></td>
         <td><%= link_to 'Edit', edit_user_path(user) %></td>
@@ -30,3 +30,5 @@
 <br>
 
 <%= link_to 'New User', new_user_path %>
+
+<p id="tbl"></p>
