@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
   resources :orders
-  resources :users
+ 
+  resources :users do 
+    member do
+        get 'user_orders'
+    end
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -17,6 +22,8 @@ Rails.application.routes.draw do
   #   resources :products
 
   # Example resource route with options:
+  # /products/:id/short
+  # /products/sold
   #   resources :products do
   #     member do
   #       get 'short'

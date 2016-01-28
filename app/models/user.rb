@@ -1,3 +1,3 @@
 class User < ActiveRecord::Base
-	has_many :Orders
+	has_many :orders
 end
